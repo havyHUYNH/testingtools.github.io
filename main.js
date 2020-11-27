@@ -41,11 +41,21 @@ function showTableData() {
 }
 
 // For conditions scope
-var textarea = document.getElementById('length');
-var result = document.getElementById('result');
+var textareaLength = document.getElementById('length');
+var textareaStartbyte = document.getElementById('startByte');
+var textareaEndbyte = document.getElementById('endByte');
+
+var resultLength = document.getElementById('resultLength');
+var resultStartbyte = document.getElementById('resultStartByte');
+var resultEndbyte = document.getElementById('resultEndByte');
 
 function updateResult() {
-    result.textContent = textarea.value;
+    resultLength.textContent = textareaLength.value;
+    resultStartbyte.textContent = textareaStartbyte.value;
+    resultEndbyte.textContent = textareaEndbyte.value;
 }
 
-textarea.onkeyup = updateResult;
+textareaLength.onkeyup = updateResult;
+textareaStartbyte.onkeyup = updateResult;
+textareaEndbyte.onkeyup = updateResult;
+
