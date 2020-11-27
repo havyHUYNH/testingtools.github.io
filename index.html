@@ -1,11 +1,48 @@
-
 <!DOCTYPE html>
 <html>
+
+<head>
+    <title>Text file reading</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
 <body>
-
-<h1>My First Heading</h1>
-
-<p>My first paragraph.</p>
-
+    <center>
+        <h1 style="color: green;">
+            Tool to analyze Data from $22
+        </h1>
+        <div>
+            <input type="file">
+            <textarea cols="30" rows="7" placeholder="Data from $22">
+			</textarea>
+        </div>
+    </center>
+    <center>
+        <h1 style="color: green;">
+            Conditions to get data
+        </h1>
+        <div>
+            <table >
+                <tr>
+                  <th>Length</th>
+                  <th>Start byte</th>
+                  <th>End byte</th>
+                </tr>
+                <tr>
+                    <th><textarea id="length" placeholder="length"> </textarea></th>
+                    <th><textarea id="startByte" placeholder="Start byte"> </textarea></th>
+                    <th><textarea id="endByte"placeholder="End byte"> </textarea></th>
+                </tr>
+              </table> 
+        </div>
+    </center>
+    <p><input type="button" id="bt" value="Show Table Data" onclick="showTableData()" /></p>
+    <p id="info"></p>
+    <!-- JavaScript -->
+    <script src="main.js"></script>
 </body>
+
 </html>
