@@ -1,15 +1,15 @@
-let input = document.querySelector('input') 
+var input = document.querySelector('input') 
 
-let textarea = document.querySelector('textarea')
+var textarea = document.querySelector('textarea')
 
 input.addEventListener('change', () => { 
-	let files = input.files; 
+	var files = input.files; 
 
 	if (files.length == 0) return; 
 
 	const file = files[0]; 
 
-	let reader = new FileReader(); 
+	var reader = new FileReader(); 
 	reader.onload = (e) => { 
 		const file = e.target.result; 
 		const lines = file.split(/\r\n|\n/); 
