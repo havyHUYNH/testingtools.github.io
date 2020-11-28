@@ -1,5 +1,17 @@
-var input = document.querySelector('input') 
 
+//=================================Variables scope===================================
+var inputData, outputData;
+var textareaLength, textareaStartbyte, textareaEndbyte;
+//=================================End=============================================
+
+//=================================Get element by ID scope===================================
+textareaLength = document.getElementById('length');
+textareaStartbyte = document.getElementById('startByte');
+textareaEndbyte = document.getElementById('endByte');
+//=================================End=============================================
+
+//=================================Give data from file scope===================================
+var input = document.querySelector('input') 
 var textarea = document.querySelector('textarea')
 
 input.addEventListener('change', () => { 
@@ -21,7 +33,7 @@ input.addEventListener('change', () => {
 	reader.onerror = (e) => alert(e.target.error.name); 
 	reader.readAsText(file); 
 }); 
-
+//=================================End=======================================================
 function showTableData() {
     document.getElementById('info').innerHTML = "";
     var myTab = document.getElementById('empTable');
@@ -40,11 +52,7 @@ function showTableData() {
     }
 }
 
-// For conditions scope
-var textareaLength = document.getElementById('length');
-var textareaStartbyte = document.getElementById('startByte');
-var textareaEndbyte = document.getElementById('endByte');
-
+//=================================For conditions scope===================================
 var resultLength = document.getElementById('resultLength');
 var resultStartbyte = document.getElementById('resultStartByte');
 var resultEndbyte = document.getElementById('resultEndByte');
@@ -58,4 +66,16 @@ function updateResult() {
 textareaLength.onkeyup = updateResult;
 textareaStartbyte.onkeyup = updateResult;
 textareaEndbyte.onkeyup = updateResult;
+//=================================End=======================================================
 
+function outputString(){
+    inputData = textarea.value;
+    var resultOutput = document.getElementById('resultOutput');
+    resultOutput.textContent = textareaLength.value;
+}
+
+outputString();
+
+function submitBtn (){
+
+}

@@ -32,7 +32,7 @@
                   <th>End byte</th>
                 </tr>
                 <tr>
-                    <th><textarea id="length" placeholder="length"> </textarea></th>
+                    <th><textarea id="length" placeholder="Length"> </textarea></th>
                     <th><textarea id="startByte" placeholder="Start byte"> </textarea></th>
                     <th><textarea id="endByte"placeholder="End byte"> </textarea></th>
                 </tr>
@@ -44,8 +44,12 @@
               </table> 
         </div>
     </center>
-    <p><input type="button" id="bt" value="Show Table Data" onclick="showTableData()" /></p>
-    <p id="info"></p>
+    <center>
+        <p><input type="button" id="bt" value="Get Data" onclick="outputString()" /></p>
+        <textarea id="resultOutput" cols="20" rows="5" placeholder="Output data"></textarea>
+    </center>
+    <!-- <p><input type="button" id="bt" value="Show Table Data" onclick="outputString()" /></p> -->
+    <!-- <p id="info"></p> -->
     <!-- JavaScript -->
     <script src="main.js"></script>
 </body>
