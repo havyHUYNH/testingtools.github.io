@@ -2,6 +2,7 @@
 //=================================Variables scope===================================
 var inputData, outputData;
 var textareaLength, textareaStartbyte, textareaEndbyte;
+var inputDataArr,inputDataStr ;
 //=================================End=============================================
 
 //=================================Get element by ID scope===================================
@@ -26,7 +27,10 @@ input.addEventListener('change', () => {
 		const file = e.target.result; 
 		const lines = file.split(/\r\n|\n/); 
         textarea.value = lines.join('\n'); 
-        console.log(textarea.value);
+        // console.log(textarea.value);
+        inputDataStr = textarea.value;
+        inputDataArr = inputDataStr.split(" ");
+        console.log(inputDataArr);
 
 	}; 
 
@@ -75,7 +79,3 @@ function outputString(){
 }
 
 outputString();
-
-function submitBtn (){
-
-}
