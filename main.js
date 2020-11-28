@@ -3,6 +3,11 @@
 var inputData, outputData;
 var textareaLength, textareaStartbyte, textareaEndbyte;
 var inputDataArr,inputDataStr ;
+var temp;
+var length, startByte, endByte;
+
+
+
 //=================================End=============================================
 
 //=================================Get element by ID scope===================================
@@ -30,13 +35,19 @@ input.addEventListener('change', () => {
         // console.log(textarea.value);
         inputDataStr = textarea.value;
         inputDataArr = inputDataStr.split(" ");
-        console.log(inputDataArr);
+        // console.log(inputDataArr);
+        // temp = inputDataArr.slice(textareaStartbyte.value,endByte+1);
+        //console.log();
+        // var resultOutput = document.getElementById('resultOutput');
+        // resultOutput.textContent = temp;
 
 	}; 
 
 	reader.onerror = (e) => alert(e.target.error.name); 
 	reader.readAsText(file); 
 }); 
+console.log("this is ");
+console.log(temp);
 //=================================End=======================================================
 function showTableData() {
     document.getElementById('info').innerHTML = "";
@@ -73,9 +84,13 @@ textareaEndbyte.onkeyup = updateResult;
 //=================================End=======================================================
 
 function outputString(){
-    inputData = textarea.value;
-    var resultOutput = document.getElementById('resultOutput');
-    resultOutput.textContent = textareaLength.value;
-}
 
-outputString();
+    
+    var inputDataArr = textarea.value;
+    inputDataArr = inputDataStr.split(" ");
+    endByte = parseInt(textareaEndbyte.value);
+    temp = inputDataArr.slice(textareaStartbyte.value,endByte + 1);
+    var resultOutput = document.getElementById('resultOutput');
+    resultOutput.textContent = temp;
+
+}
